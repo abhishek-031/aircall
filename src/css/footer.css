@@ -1,0 +1,23 @@
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: white;
+}
+
+footer div {
+  height: 70px;
+  width: 70px;
+  margin-bottom: 30px;
+  box-sizing: content-box;
+  border-radius: 50%;
+  background: #00ba00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 10px solid white;
+}

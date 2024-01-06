@@ -1,9 +1,55 @@
 header {
-  height: 40px;
+  height: 60px;
   margin: 0 auto;
-  padding: 20px 0;
   text-align: center;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+header img {
+  padding-left: 20px;
+}
+
+header button {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #807f7f;
+  border: none;
+  background: none;
+  border-bottom: 4px solid transparent;
+  height: 100%;
+  padding-top: 4px;
+  cursor: pointer;
+}
+
+header button[data-active=true] {
+  border-bottom: 4px solid #ff5000;
+  color: black;
+}
+
+header div {
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  flex: auto;
+  background-color: #efefef;
+  position: relative;
+  overflow: hidden;
+  padding-left: 20px;
+}
+
+header div::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 50px;
+  background: white;
+  transform: translate(-20px, -10px);
+  left: -10px;
+  rotate: 30deg;
+  border-right: 1px solid #c0c0c0;
 }
 
 header svg {

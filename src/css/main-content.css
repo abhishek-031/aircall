@@ -1,0 +1,84 @@
+#main-content {
+  min-height: 516px;
+  max-height: 516px;
+  background: #efefef;
+  padding: 20px 20px 60px 20px;
+  overflow: scroll;
+}
+
+.archive-button {
+  border: 1px solid #cfcfcf;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f7f7f7;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.archive-button:hover {
+  background: #fbfbfb;
+}
+
+.archive-button img {
+  padding-right: 10px;
+}
+
+.archive-button span {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #595959;
+}
+
+.activity {
+  padding: 14px;
+  border: 1px solid #cfcfcf;
+  border-radius: 10px;
+  background: #f7f7f7;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.activity p {
+  margin-left: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #595959;
+}
+
+.activity button {
+  position: absolute;
+  right: 15px;
+  top: -10px;
+  padding: 4px 10px;
+  font-weight: 600;
+  background: #c4c4c4;
+  border-color: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.activity button:hover {
+  background: #ccc;
+}
+
+.activity button::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  display: block;
+  position: absolute;
+  bottom: -5px;
+  right: 1px;
+  background: #c4c4c4;
+  rotate: 45deg;
+}
+
+.three-dots {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  padding: 0 10px;
+}
