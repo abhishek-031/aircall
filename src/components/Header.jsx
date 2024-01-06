@@ -1,6 +1,7 @@
 import React from "react";
 import { ActionTypes, createAction } from "../hooks/useStore";
 import { useAppContext } from "../hooks/useAppContext";
+import logo from "../icons/logo.svg";
 
 const Header = () => {
   const { state, dispatch } = useAppContext();
@@ -11,7 +12,7 @@ const Header = () => {
 
   return (
     <header>
-      <img height="30" src="../public/icons/logo.svg" />
+      <img height="30" src={logo} />
       <div>
         <button
           onClick={() => changeTab(0)}

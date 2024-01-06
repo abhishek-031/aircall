@@ -1,15 +1,18 @@
 import React from "react";
+import phone from "../icons/phone.svg";
+import videoCall from "../icons/video-call.svg";
+import phoneWhite from "../icons/phone-white.svg";
 
 export default function Footer() {
   return (
     <footer>
-      <img src="/public/icons/phone.svg" />
-      <img src="/public/icons/video-call.svg" />
+      <img src={phone} />
+      <img src={videoCall} />
       <div>
-        <img src="/public/icons/phone-white.svg" />
+        <img src={phoneWhite} />
       </div>
-      <img src="/public/icons/video-call.svg" />
-      <img src="/public/icons/phone.svg" />
+      <img src={videoCall} />
+      <img src={phone} />
     </footer>
   );
 }

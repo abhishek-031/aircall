@@ -1,14 +1,18 @@
+import outgoingCall from "../icons/outgoing-call.svg";
+import incomingCall from "../icons/incoming-call.svg";
+import missedCall from "../icons/missed-call.svg";
+
 export const callIconToUse = (activity) => {
   let callIcon = "";
   if (activity.direction === "outbound") {
-    callIcon = "outgoing-call";
+    callIcon = outgoingCall;
   } else if (
     activity.direction === "inbound" &&
     activity.call_type === "answered"
   ) {
-    callIcon = "incoming-call";
+    callIcon = incomingCall;
   } else {
-    callIcon = "missed-call";
+    callIcon = missedCall;
   }
   return callIcon;
 };

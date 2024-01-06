@@ -4,12 +4,14 @@ import {
   ARCHIVE_ALL_ACTIVITIES,
   RESET_ALL_ACTIVITIES,
 } from "../utility/ApiCalls";
+import archiveIcon from "../icons/archive-icon.svg";
+import unArchiveIcon from "../icons/unarchive-icon.svg";
 
 export default function ArchiveAllButton() {
   const { state, dispatch } = useAppContext();
   const buttonText =
     state.selectedTab === 0 ? "Archive All Calls" : "Unarchive All Calls";
-  const icon = state.selectedTab === 0 ? "archive-icon" : "unarchive-icon";
+  const icon = state.selectedTab === 0 ? archiveIcon : unArchiveIcon;
 
   const archiveOrUnarchiveAll = () => {
     if (state.selectedTab === 0) {
@@ -21,7 +23,7 @@ export default function ArchiveAllButton() {
 
   return (
     <div className="archive-button" onClick={archiveOrUnarchiveAll}>
-      <img src={`../public/icons/${icon}.svg`} />
+      <img src={icon} />
       <span>{buttonText}</span>
     </div>
   );

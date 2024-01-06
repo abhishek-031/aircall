@@ -2,6 +2,7 @@ import React from "react";
 import { callIconToUse } from "../utility/utils";
 import { useAppContext } from "../hooks/useAppContext";
 import { UPDATE_ACTIVITY } from "../utility/ApiCalls";
+import threeDots from "../icons/three-dots.svg";
 
 export default function Activity({ activity }) {
   const { state, dispatch } = useAppContext();
@@ -35,13 +36,13 @@ export default function Activity({ activity }) {
 
   return (
     <div className="activity">
-      <img src={`/public/icons/${callIconToUse(activity)}.svg`} />
+      <img src={callIconToUse(activity)} />
       <p>{activity.via || "9394883"}</p>
       {isDotsExpanded && <button id="archive-button">{buttonText}</button>}
       <img
         onClick={expandDots}
         className="three-dots"
-        src="/public/icons/three-dots.svg"
+        src={threeDots}
       />
     </div>
   );
